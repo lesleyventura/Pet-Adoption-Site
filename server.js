@@ -169,7 +169,7 @@ app.post('/create-account', (req, res) => {
       return res.json({ success: false, message: 'Unable to read login file.' });
     }
 
-    const users = err ? [] : data.split('\n').filter(line => line.trim()).map(line => line.split(':')[0]);
+    const users = err ? [] : data.split(/\r?\n/).filter(line => line.trim()).map(line => line.split(':')[0]);
 
     // handles if username is already existing
     if (users.includes(username)) {
