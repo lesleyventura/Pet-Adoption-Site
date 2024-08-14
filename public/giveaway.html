@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Give Away a Cat/Dog</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script src="javascript/datetime.js"></script>
+    <script src="javascript/giveaway-form-validation.js"></script>
+  </head>
+
+  <body onload="updateTime()">
+    <div class="container">
+      <div class="header">  
+        <div class="left-section">
+          <div class="logo-container">
+            <a href="home.html">
+              <img class="logo" src="pictures/1730362-200.png" alt="Logo"> 
+            </a>
+            <div class="web-name"> 
+              <a id="web-name-link" href="home.html">
+                PawPals <br> Adoption Centre
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-section">
+          <div class="datetime">
+            <p id="time"></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="sidebar"> 
+        <div class="sidebar-link"> 
+          <a href="home.html">
+            <div> Home </div>
+          </a>
+        </div>
+  
+        <div class="sidebar-link"> 
+          <a href="pets.html">
+            <div> Browse Available Pets </div>
+          </a>
+        </div>
+  
+        <div class="sidebar-link"> 
+          <a href="find.html">
+            <div> Find a Dog/Cat </div>
+          </a>
+        </div>
+  
+        <div class="sidebar-link"> 
+          <a href="dogcare.html">
+            <div> Dog Care </div>
+          </a>
+        </div>
+  
+        <div class="sidebar-link"> 
+          <a href="catcare.html">
+            <div> Cat Care </div>
+          </a>
+        </div>
+  
+        <div class="sidebar-link"> 
+          <a href="/check-login?redirect=/giveaway">
+            <div> Have a Pet to Give Away </div>
+          </a>
+        </div>
+  
+        <div class="sidebar-link"> 
+          <a href="contact.html">
+            <div> Contact us </div>
+          </a>
+        </div>
+
+        <div class="sidebar-link"> 
+          <a href="account.html">
+            <div> Create an account </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="content-section"> 
+        <div class="giveaway"> 
+          <div class="content-text"> 
+            <form id="giveaway-form" action="/submit-pet" method="post">
+              <fieldset class="owner-information">
+                <legend>Current Owner Information</legend>
+                <div id="error-message"></div>
+                <div id="form-message"></div>
+                <div class="form-group">
+                  <label for="fname"> First name </label>
+                  <input type="text" id="fname" name="fname">
+                </div>
+                <div class="form-group">
+                  <label for="lname"> Family name </label>
+                  <input type="text" id="lname" name="lname">
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email </label>
+                  <input type="email" id="email" name="email">
+                </div>
+              </fieldset>
+  
+              <br>
+  
+              <fieldset class="animal-information">
+                <legend>Animal's Information</legend>
+                <p>
+                  <label> Animal: &emsp;</label>
+    
+                  <label for="cat"> Cat </label>
+                  <input type="radio" id="cat" name="animal"> 
+    
+                  <label for="dog"> Dog </label>
+                  <input type="radio" id="dog" name="animal">
+                </p>
+                  
+                <p>
+                  <label for="cat-breed"> Cat Breed: &emsp;</label>
+                  <select id="cat-breed" name="cat-breed">
+                    <option selected value="">Select</option>
+                    <option value="other_dog_breed"> Other</option>
+                    <option value="Siamese"> Siamese </option>
+                    <option value="American-Shorthair"> American Shorthair </option>
+                    <option value="Bombay"> Bombay </option>
+                    <option value="British_Shorthair"> British Shorthair </option>
+                    <option value="Maine-Coon"> Maine Coon </option>
+                    <option value="Persian"> Persian </option>
+                    <option value="Scottish-Fold"> Scottish Fold</option>
+                    <option value="Sphynx"> Sphynx </option>
+                    <option value="Ragdoll"> Ragdoll</option>
+                    <option value="Russian-Blue"> Russian Blue</option>
+                  </select>
+                  </p>
+                  <p>
+                  <label for="dog-breed">Dog Breed: &emsp;</label>
+                  <select id="dog-breed" name="dog-breed">
+                    <option selected value="">Select</option>
+                    <option value="other-dog-breed"> All </option>
+                    <option value="Poodle"> Poodle </option>
+                    <option value="Beagle"> Beagle </option>
+                    <option value="Boxer"> Boxer </option>
+                    <option value="Bulldog"> Bulldog </option>
+                    <option value="Dachshund"> Dachshund </option>
+                    <option value="German-Shepherd"> German Sheperd</option>
+                    <option value="Golden-Retriever"> Golden Retriever </option>
+                    <option value="Labrador"> Labrador Retriever </option>
+                    <option value="Rottweiler"> Rottweiler</option>
+                    <option value="Yorkshire-Terrier"> Yorkshire Terrier </option>
+                  </select>
+                </p>
+    
+                <p>
+                  <label for="age"> Age: &emsp;</label>
+                  <select name="age" id="age">
+                    <option selected value="">Select</option>
+                    <option value="young"> Young (0-2 years) </option>
+                    <option value="adult"> Adult (2+ years)</option>
+                    <option value="adult"> Senior (7+ years)</option>
+                  </select>
+                </p>
+    
+                <p>
+                  <label> Gender: &emsp;</label>
+                  <input type="radio" id="female" name="gender">
+                  <label for="female"> Female </label>
+          
+                  <input type="radio" id="male" name="gender">
+                  <label for="male"> Male </label>
+                </p>
+    
+                <p>
+                  <label>Friendly with Other Dogs? &emsp;</label>
+    
+                  <label for="dog-friendly-yes"> Yes </label>
+                  <input type="radio" id="dog-friendly-yes" name="dog-friendly">
+    
+                  <label for="dog-friendly-no"> No </label>
+                  <input type="radio" id="dog-friendly-no" name="dog-friendly">
+                </p>
+    
+                <p>
+                  <label>Friendly with Other Cats? &emsp;</label>
+    
+                  <label for="cat-friendly-yes"> Yes </label>
+                  <input type="radio" id="cat-friendly-yes" name="cat-friendly">
+    
+                  <label for="cat-friendly-no"> No </label>
+                  <input type="radio" id="cat-friendly-no" name="cat-friendly">
+                </p>
+    
+                <p>
+                  <label> Suitable for Family with Small Children? &emsp;</label>
+                  <label for="kid-friendly-yes"> Yes </label>
+                  <input type="radio" id="kid-friendly-yes" name="kids">
+    
+                  <label for="kid-friendly-no"> No </label>
+                  <input type="radio" id="kid-friendly-no" name="kids">
+                </p>
+              </fieldset>
+  
+              <p>
+                <label for="comment"> Additional Comments: </label> <br>
+                <textarea id="comment" name="comment" rows="10" cols="50"></textarea> <br>
+              </p>
+  
+              <div class="button-container">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer">
+        <div class="footer-container"> 
+          <a id="disclaimer-link" href="disclamer.html">
+            <div class="footer-content"> Privacy/Disclamer Statement </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

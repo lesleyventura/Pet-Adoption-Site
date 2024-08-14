@@ -1,0 +1,2 @@
+1:user1:cat:Bombay:adult:male:true:false:false:
+2:user1:cat:Bombay:adult:male:true:true:true:

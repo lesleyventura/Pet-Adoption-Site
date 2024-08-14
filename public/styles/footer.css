@@ -1,0 +1,47 @@
+.footer {
+  height: 120px;
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: center;
+  background-color: #004346;
+  position: relative;
+}
+
+.footer-content a:link, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.footer-container a {
+  font-size: 1em;
+}
+
+#disclaimer-link {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+  }
+  .footer-container a {
+    font-size: 1.15em;
+  }
+}

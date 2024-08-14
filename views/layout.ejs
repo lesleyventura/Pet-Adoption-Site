@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/styles/general.css">
+  <link rel="stylesheet" href="/styles/header.css">
+  <link rel="stylesheet" href="/styles/sidebar.css">
+  <link rel="stylesheet" href="/styles/content.css">
+  <link rel="stylesheet" href="/styles/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <title><%= title %></title>
+</head>
+
+<body>
+  <div class="container">
+    <%- include('partials/header') %> <!-- Include the header -->
+    <%- include('partials/sidebar') %>
+    <div class="content">
+      <%- body %> <!-- Main content will be injected here -->
+    </div>
+    <%- include('partials/footer') %> <!-- Include the footer -->
+  </div>
+  
+</body>
+<script src="/javascript/datetime.js" defer></script>
+<script src="/javascript/find-pet-validation.js" defer></script>
+<script src="/javascript/create-account.js" defer></script>
+<script src="/javascript/giveaway-form-validation.js" defer></script>
+<script src="/javascript/login.js" defer></script>
+<script src="/javascript/pets.js" defer></script>
+</html>

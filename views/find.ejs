@@ -1,0 +1,96 @@
+<div class="content-section"> 
+  <div class="find"> 
+    <div class="content-text"> 
+      <form id="find-pet-form" action="/pets" method="get">
+        <fieldset class="findanimal">
+          <legend>Find a Pet!</legend>
+          <p>
+            <label>What animal are you looking for? &emsp;</label>
+            <label for="cat">Cat</label>
+            <input type="radio" id="cat" name="type" value="cat"> 
+            <label for="dog">Dog</label>
+            <input type="radio" id="dog" name="type" value="dog">
+          </p>
+          
+          <p>
+            <label for="cat-breed">Cat Breed: &emsp;</label>
+            <select id="cat-breed" name="catBreed">
+              <option selected value="">Select</option>
+              <option value="All">All</option>
+              <option value="Calico">Calico</option>
+              <option value="Siamese">Siamese</option>
+              <option value="American Shorthair">American Shorthair</option>
+              <option value="British Shorthair">British Shorthair</option>
+              <option value="Persian">Persian</option>
+              <option value="Ragdoll">Ragdoll</option>
+              <option value="Russian Blue">Russian Blue</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="dog-breed">Dog Breed: &emsp;</label>
+            <select id="dog-breed" name="dogBreed">
+              <option selected value="">Select</option>
+              <option value="All">All</option>
+              <option value="Poodle">Poodle</option>
+              <option value="Beagle">Beagle</option>
+              <option value="Boxer">Boxer</option>
+              <option value="Bulldog">Bulldog</option>
+              <option value="Dachshund">Dachshund</option>
+              <option value="German Shepherd">German Shepherd</option>
+              <option value="Golden Retriever">Golden Retriever</option>
+              <option value="Labrador Retriever">Labrador Retriever</option>
+              <option value="Rottweiler">Rottweiler</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="age">Preferred Age: &emsp;</label>
+            <select name="age" id="age">
+              <option selected value="">Select</option>
+              <option value="All">All</option>
+              <option value="Young">Young (0-2 years)</option>
+              <option value="Adult">Adult (2+ years)</option>
+              <option value="Senior">Senior (7+ years)</option>
+            </select>
+          </p>
+
+          <p>
+            <label>Gender: &emsp;</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="gender-all" name="gender" value="All">
+            <label for="gender-all">Any</label>
+          </p>
+
+          <p>
+            <label>Do you have other animals? &emsp;</label>
+            <label for="other-cats">Cat</label>
+            <input type="checkbox" id="other-cats" name="otherCats" value="true">
+            <label for="other-dogs">Dog</label>
+            <input type="checkbox" id="other-dogs" name="otherDogs" value="true">
+            <label for="no-other-animals">None</label>
+            <input type="checkbox" id="no-other-animals" name="noOtherAnimals" value="true">
+          </p>
+
+          <p>
+            <label>Does your pet need to be kid friendly? &emsp;</label>
+            <label for="yes">Yes</label>
+            <input type="radio" id="yes" name="kidsFriendly" value="true">
+            <label for="no">No</label>
+            <input type="radio" id="no" name="kidsFriendly" value="false">
+          </p>
+
+          <div class="button-container">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+          </div>
+
+          <p id="error-message"></p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="content-section"> 
+  <div class="login"> 
+    <div class="content-text"> 
+      <form id="login-form" action="/login" method="post">  
+        <fieldset class="login">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          
+          <small>Username can contain letters (both upper and lower case) and digits only.</small>
+          <br><br>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <small>Password must be at least 4 characters long, contain at least one letter and one digit.</small>
+          <br><br>
+
+          <div class="button-container">
+            <button type="submit">Login</button>
+          </div>
+
+          <p id="login-message"></p>
+          
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

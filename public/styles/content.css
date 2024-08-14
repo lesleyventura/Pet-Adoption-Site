@@ -1,0 +1,370 @@
+.content-section {
+  padding: 40px;
+  display: flex;
+  grid-column: 2 / 3;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-text, .pets {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.giveaway .content-text {
+  text-align: left;
+  width: 100%;
+}
+
+.owner-information, .animal-information {
+  width: 100%;
+}
+
+.homepage {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+}
+
+.dogcare {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.dogcare .content-text, .find .content-text, 
+.catcare .content-text, .disclaimer .content-text, 
+.giveaway .content-text {
+  text-align: left;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.catcare {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.disclaimer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  max-width: 1200px;
+  row-gap: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.pets .content-text {
+  text-align: center;
+  align-items: center;
+}
+
+.pet-picture-row {
+  overflow: hidden;
+  position: relative;
+  max-width: 300px; 
+  max-height: 320px; 
+  border: 3px solid #409794;
+  border-radius: 5px; 
+}
+
+.pet-picture {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover; 
+  object-position: 80% 20%;
+}
+
+.pet-info {
+  text-align: left;
+  line-height: 15px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.pet-info .pet-name {
+  font-weight: 700;
+  text-align: center;
+}
+
+.pet-info .pet-breed, 
+.pet-info .pet-age, 
+.pet-info .pet-gender,
+.pet-info .pet-friendliness {
+  margin-bottom: 5px; 
+}
+
+.pet {
+  max-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #a0dcda;
+  padding: 20px;
+  border: 3px solid #409794;
+  border-radius: 8px;
+}
+
+.pet img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.interested-button {
+  background-color: #409794;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: .9em;
+  transition: background-color .15s;
+}
+
+.interested-button:hover {
+  background-color: #e4a7b3;
+}
+
+.interested-button:active {
+  background-color: #dd95a4;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.contact .content-text {
+  display: flex;
+  flex-direction: row;
+  font-family: "Source Sans 3", sans-serif;
+  column-gap: 100px;
+  width: 100%;
+  flex-grow: 1;     /* Allows the element to grow if there is available space */
+  box-sizing: border-box; 
+  justify-content: center;     /* Centers the content horizontally */
+  align-items: center; 
+}
+
+.contact .content-text > div {
+  flex: 1;                  /* Allows the child elements to grow and take up equal space */
+}
+
+.contact .content-text .our-contact-info {
+  text-align: center;       /* Centers text within the contact information */
+}
+
+.contact .content-text .contact-form {
+  text-align: left;         /* Left-justifies text within the contact form */
+}
+
+.contact-info {
+  background-color: #a0dcda;
+  border: 2px solid #409794;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button-container input[type="submit"],
+.button-container input[type="reset"],
+.button-container button {
+  background-color: #409794;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: .9em;
+  transition: background-color .15s;
+}
+
+.button-container input[type="submit"]:hover,
+.button-container input[type="reset"]:hover,
+.button-container button:hover {
+  background-color: #e4a7b3;
+}
+
+.button-container input[type="submit"]:active,
+.button-container input[type="reset"]:active,
+.button-container .interested-button:active {
+  background-color: #dd95a4;
+}
+
+@media (max-width: 767px) {
+  .content-section {
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .content, .owner-information, .animal-information {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  form, textarea, fieldset {
+    max-width: 400px;
+  }
+
+  .content-text, .pets {
+    max-width: 600px;
+    font-size: 1em;
+  }
+
+  .pets {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+
+  .pet-interested {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pet-picture-row {
+    max-width: 280px; 
+    max-height: 300px; 
+  }
+
+  .pet-picture {
+    object-fit: cover; 
+    object-position: center;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .contact .content-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .content-text, .pets {
+    min-width: 85%;
+    font-size: 1.15em;
+  }
+
+  form, textarea, fieldset {
+    max-width: 500px;
+  }
+
+  .pets {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
+
+
+  .pet-info {
+    width: 100%;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .content-text, .pets  {
+    max-width: 100%;
+    font-size: 1.25em;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 75%;
+  }
+
+  .dogcare .content-text, .find .content-text, 
+  .catcare .content-text, .disclaimer .content-text, 
+  .giveaway .content-text {
+    width: 1000px;
+  }
+
+  form, textarea, fieldset {
+    max-width: 1000px;
+  }
+
+  .pets {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+fieldset {
+  background-color: #a0dcda;
+  border: 3px #409794 solid;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+legend {
+  color: #2c7673;
+  font-weight: 500;
+}
+

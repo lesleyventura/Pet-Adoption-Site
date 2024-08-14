@@ -1,0 +1,32 @@
+<div class="content-section"> 
+  <div class="account"> 
+    <div class="content-text"> 
+      <form id="create-account-form" action="/create-account" method="post">
+        <fieldset class="create-account">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          
+          <small>Username can contain letters (both upper and lower case) and digits only.</small>
+          <br><br>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <small>Password must be at least 4 characters long, contain at least one letter and one digit.</small>
+          <br><br>
+
+          <div class="button-container">
+            <button type="submit">Create Account</button>
+          </div>
+
+          <p id="message"></p>
+          
+        </fieldset>
+      
+      </form>
+    </div>
+  </div>
+</div>

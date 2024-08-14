@@ -1,0 +1,89 @@
+.header {
+  height: 120px;
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: #48A9A6;
+}
+
+.logo {
+  height: 70px;
+  display: flex;
+  margin-right: 24px;
+  margin-left: 30px;
+}
+
+.web-name {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+}
+
+.datetime {
+  display: flex;
+  margin-right: 20px;
+  color: white;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 22px;
+}
+
+#web-name-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    height: 50px;
+    display: flex;
+    margin-right: 24px;
+    margin-left: 30px;
+  }
+  
+  .web-name {
+    font-size: 20px;
+  }
+
+  .datetime {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .logo {
+    height: 60px;
+  }
+
+  .web-name {
+    font-size: 22px;
+  }
+
+  .datetime {
+    font-size: 18px;
+  }
+}

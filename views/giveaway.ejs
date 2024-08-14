@@ -1,0 +1,162 @@
+<div class="content-section"> 
+  <div class="giveaway"> 
+    <div class="content-text"> 
+      <form id="giveaway-form" action="/submit-pet" method="post">
+        <fieldset class="owner-information">
+          <legend>Current Owner Information</legend>
+          <p id="form-message"></p>
+          <div class="form-group">
+            <label for="fname"> First name </label>
+            <input type="text" id="fname" name="fname">
+          </div>
+          <div class="form-group">
+            <label for="lname"> Family name </label>
+            <input type="text" id="lname" name="lname">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email </label>
+            <input type="email" id="email" name="email">
+          </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="animal-information">
+          <legend>Animal's Information</legend>
+          <p>
+            <label> Animal: &emsp;</label>
+
+            <label for="cat"> Cat </label>
+            <input type="radio" id="cat" name="animal" value="cat"> 
+
+            <label for="dog"> Dog </label>
+            <input type="radio" id="dog" name="animal" value="dog">
+          </p>
+            
+          <p>
+            <label for="cat-breed"> Cat Breed: &emsp;</label>
+            <select id="cat-breed" name="cat-breed">
+              <option selected value="">Select</option>
+              <option value="Abyssinian">Abyssinian</option>
+              <option value="American Shorthair">American Shorthair</option>
+              <option value="Bengal">Bengal</option>
+              <option value="Birman">Birman</option>
+              <option value="Bombay">Bombay</option>
+              <option value="British Shorthair">British Shorthair</option>
+              <option value="Calico">Calico</option>
+              <option value="Devon Rex">Devon Rex</option>
+              <option value="Himalayan">Himalayan</option>
+              <option value="Maine Coon">Maine Coon</option>
+              <option value="Manx">Manx</option>
+              <option value="Norwegian Forest">Norwegian Forest</option>
+              <option value="Oriental Shorthair">Oriental Shorthair</option>
+              <option value="Persian">Persian</option>
+              <option value="Ragdoll">Ragdoll</option>
+              <option value="Russian Blue">Russian Blue</option>
+              <option value="Scottish Fold">Scottish Fold</option>
+              <option value="Siamese">Siamese</option>
+              <option value="Siberian">Siberian</option>
+              <option value="Sphynx">Sphynx</option>
+              <option value="Turkish Angora">Turkish Angora</option>
+              <option value="Turkish Van">Turkish Van</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          
+          <p>
+            <label for="dog-breed">Dog Breed: &emsp;</label>
+            <select id="dog-breed" name="dog-breed">
+              <option selected value="">Select</option>
+              <option value="Beagle">Beagle</option>
+              <option value="Bernese Mountain">Bernese Mountain</option>
+              <option value="Boxer">Boxer</option>
+              <option value="Bulldog">Bulldog</option>
+              <option value="Dachshund">Dachshund</option>
+              <option value="French Bulldog">French Bulldog</option>
+              <option value="German Shepherd">German Shepherd</option>
+              <option value="Golden Retriever">Golden Retriever</option>
+              <option value="Great Dane">Great Dane</option>
+              <option value="Labrador Retriever">Labrador Retriever</option>
+              <option value="Poodle">Poodle</option>
+              <option value="Pomeranian">Pomeranian</option>
+              <option value="Rottweiler">Rottweiler</option>
+              <option value="Siberian Husky">Siberian Husky</option>
+              <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+              <option value="Shih Tzu">Shih Tzu</option>
+              <option value="Cocker Spaniel">Cocker Spaniel</option>
+              <option value="Border Collie">Border Collie</option>
+              <option value="Chihuahua">Chihuahua</option>
+              <option value="Maltese">Maltese</option>
+              <option value="Australian Shepherd">Australian Shepherd</option>
+              <option value="Saint Bernard">Saint Bernard</option>
+              <option value="Newfoundland">Newfoundland</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          
+
+          <p>
+            <label for="age"> Age: &emsp;</label>
+            <select name="age" id="age">
+              <option selected value="">Select</option>
+              <option value="young"> Young (0-2 years) </option>
+              <option value="adult"> Adult (2+ years)</option>
+              <option value="adult"> Senior (7+ years)</option>
+            </select>
+          </p>
+
+          <p>
+            <label> Gender: &emsp;</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female"> Female </label>
+    
+            <input type="radio" id="male" name="gender">
+            <label for="male"> Male </label>
+          </p>
+
+          <p>
+            <label>Friendly with Other Dogs? &emsp;</label>
+
+            <label for="dog-friendly-yes"> Yes </label>
+            <input type="radio" id="dog-friendly-yes" name="dog-friendly" value="true">
+
+            <label for="dog-friendly-no"> No </label>
+            <input type="radio" id="dog-friendly-no" name="dog-friendly" value="false">
+          </p>
+
+          <p>
+            <label>Friendly with Other Cats? &emsp;</label>
+
+            <label for="cat-friendly-yes"> Yes </label>
+            <input type="radio" id="cat-friendly-yes" name="cat-friendly" value="true">
+
+            <label for="cat-friendly-no"> No </label>
+            <input type="radio" id="cat-friendly-no" name="cat-friendly" value="false">
+          </p>
+
+          <p>
+            <label> Suitable for Family with Small Children? &emsp;</label>
+            <label for="kid-friendly-yes"> Yes </label>
+            <input type="radio" id="kid-friendly-yes" name="kids" value="true">
+
+            <label for="kid-friendly-no"> No </label>
+            <input type="radio" id="kid-friendly-no" name="kids" value="false">
+          </p>
+          <p id="error-message"></p>
+        </fieldset>
+
+        <p>
+          <label for="comment"> Additional Comments: </label> <br>
+          <textarea id="comment" name="comment" rows="10" cols="50"></textarea> <br>
+        </p>
+
+        <div class="button-container">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Clear">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="content-section">
+  <div id="pets-container" class="pets">
+    <% pets.forEach(pet => { %>
+      <div class="pet">
+        <div class="pet-picture-row">
+          <img class="pet-picture" src="/pictures/<%= pet.image %>" alt="<%= pet.name %>">
+        </div>
+        <div class="info">
+          <div class="pet-info">
+            <p class="pet-name"><%= pet.name %></p>
+            <p class="pet-breed">Breed: <%= pet.breed %></p>
+            <p class="pet-age">Age: <%= pet.age %></p>
+            <p class="pet-gender">Gender: <%= pet.gender %></p>
+            <p class="pet-friendliness"><%= pet.otherCats ? 'Friendly with other cats' : 'Not friendly with other cats' %></p>
+            <p class="pet-friendliness"><%= pet.otherDogs ? 'Friendly with other dogs' : 'Not friendly with other dogs' %></p>
+            <p><%= pet.kidsFriendly ? 'Kid Friendly' : 'Not Kid Friendly' %></p>
+          </div>
+          <div class="pet-interested">
+            <button class="interested-button">Interested!</button>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+
+  <script src="/javascript/pets.js" defer></script>
+</div>
