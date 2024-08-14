@@ -167,6 +167,8 @@ app.post('/create-account', (req, res) => {
     return res.json({ success: false, message: 'Invalid username or password format.' });
   }
 
+  console.log('Login file path:', LOGIN_FILE);
+
   fs.readFile(LOGIN_FILE, 'utf8', (err, data) => {
     if (err && err.code !== 'ENOENT') {
       return res.json({ success: false, message: 'Unable to read login file.' });
