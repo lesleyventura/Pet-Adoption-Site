@@ -13,9 +13,6 @@ app.use(ejsLayouts);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// const PETS_FILE = path.join(__dirname, 'pets.txt');
-// const LOGIN_FILE = path.join(__dirname, 'login.txt');
-// const AVAIL_FILE = path.join(__dirname, 'available.txt');
 const LOGIN_FILE = process.env.LOGIN_FILE ? path.resolve(process.env.LOGIN_FILE) : path.join(__dirname, 'login.txt');
 const AVAIL_FILE = process.env.AVAIL_FILE ? path.resolve(process.env.AVAIL_FILE) : path.join(__dirname, 'available.txt');
 const PETS_FILE = process.env.PETS_FILE ? path.resolve(process.env.PETS_FILE) : path.join(__dirname, 'pets.txt');
