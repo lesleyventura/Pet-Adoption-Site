@@ -176,12 +176,6 @@ app.post('/create-account', (req, res) => {
       return res.json({ success: false, message: 'Username is already taken. Please choose another one.' });
     }
 
-    const accountEntry = `${username}:${password}\n`;
-    // Debugging line to check which file the data is being written to
-    console.log('Appending to file:', LOGIN_FILE);
-    // Debugging line to check what is being written to the file
-    console.log('Data being written to file:', accountEntry);
-
     fs.appendFile(LOGIN_FILE, `${username}:${password}\n`, (err) => {
       if (err) {
         return res.json({ success: false, message: 'Unable to write to login file.' });
@@ -218,10 +212,6 @@ app.post('/login', (req, res) => {
       console.error('Error reading login file:', err);
       return res.status(500).json({ success: false, message: 'Server error' });
     }
-
-    console.log('Checking file:', LOGIN_FILE);
-    // Debugging line to print contents of the file
-    console.log('File contents:', data);
 
     const credentials = data.split(/\r?\n/).some(line => {
       const [storedUsername, storedPassword] = line.split(':').map(part => part.trim());
@@ -278,9 +268,6 @@ app.post('/submit-pet', (req, res) => {
       }
     }
     const petEntry = `${newPetId}:${req.session.user}:${animal}:${breed}:${age}:${gender}:${dogFriendly}:${catFriendly}:${kids}:${comment}\n`;
-
-    console.log('Appending to file:', AVAIL_FILE);
-    console.log('Pet entry being written to file:', petEntry);
     
     fs.appendFile(AVAIL_FILE, petEntry, err => {
       if (err) {
