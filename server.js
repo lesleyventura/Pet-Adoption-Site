@@ -218,8 +218,9 @@ app.post('/login', (req, res) => {
       return res.status(500).json({ success: false, message: 'Server error' });
     }
 
-    const credentials = data.split('\n').some(line => {
-      const [storedUsername, storedPassword] = line.split(':');
+    const credentials = data.split(/\r?\n/).some(line => {
+      const [storedUsername, storedPassword] = line.split(':').map(part => part.trim());
+      console.log('Checking username:', storedUsername, 'password:', storedPassword);
       return storedUsername === username && storedPassword === password;
     });
 
